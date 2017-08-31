@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact Card</title>
+        <meta charset="UTF-8">
+        <link href="ContactCard.css" rel="stylesheet">
+        <script type="text/javascript" src= "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+
+                $(document).on("submit", "#formArea", function(){
+                    $("#cardArea").append("<div id='cardFront'><h1>" 
+                    + $("#First_Name").val() 
+                    + " " 
+                    + $("#Last_Name").val() 
+                    + "</h1><h3>Click for description!</h3><p id='cardBack'> " 
+                    + $("#description").val() 
+                    + "</p></div>");
+                    // $("#cardArea").append("<div id='cardFront'></div>")
+                    // $("#cardFront").append("<h1>" + $("#First_Name").val() + " " + $("#Last_Name").val() + "</h1>");
+                    // $("#cardFront").append("<h3>Click for description!</h3>");
+                    // $("#cardFront").append("<p id='cardBack'>" + $("#description").val() + "</p>");
+                    $("#First_Name").val("");
+				    $("#Last_Name").val("");
+				    $("#description").val("");
+                    return false;
+                });
+
+                $(document).on("click","#cardFront",function(){
+                    $(this).children().toggle();
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <h2>The Coding Dojo Contact Card</h2>
+        </div>
+        <div id="formArea">
+            <form action="process.php" method="post">  
+                <p>
+                    <label for="First_Name">First Name:</label>
+                    <input type="text" id="First_Name" name="first_name" placeholder="First Name">
+                </p>
+                <p>
+                    <label for="Last_Name">Last Name:</label>
+                    <input type="text" id="Last_Name" name="last_name" placeholder="Last Name">
+                </p>
+                <p>
+                    <label>Description:</label>
+                </p>
+                <p>
+                    <textarea id="description" name="Description" placeholder="Enter Description"></textarea>
+                </p>
+                <p>
+                    <input id="submit" type="submit" value="Add User">
+                </p>
+            </form>
+        </div>
+        <div id="cardArea">
+            <!-- <table id="contactCards">
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+            </table> -->
+        </div>
+    
+    </body>
+</html>

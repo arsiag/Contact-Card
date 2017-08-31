@@ -1,0 +1,56 @@
+*{
+    font-family: sans-serif;
+}
+#header{
+    width: 1004px;
+    height: 100px;
+    background-color: silver;
+    border: 3px solid black;
+    display: block;
+    text-align: center;
+}
+#formArea{
+    width:500px;
+    height: 1600px;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 30px;
+}
+#cardArea{
+    width:500px;
+    height: 1600px;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 30px;
+    text-align: right;
+}
+p{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+textarea{
+    width: 240px;
+    height: 100px;
+}
+#cardFront {
+    width: 300px;
+    height: 150px;
+    margin: 10px; 
+    border: 2px solid black;
+    text-align: center;
+    background-color: lightblue
+}
+#cardBack{
+    width: 300px;
+    height: 150px;
+    margin: 10px;
+    border: 2px solid black;
+    display: none;
+    background-color: lightgreen;
+    word-wrap: normal;
+    font-size: 150%;
+}
